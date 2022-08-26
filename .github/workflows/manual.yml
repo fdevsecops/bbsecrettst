@@ -18,3 +18,5 @@ jobs:
         git config --global --add safe.directory "$GITHUB_WORKSPACE"
         echo "$GIT_WORK_TREE"
         echo "$GITHUB_WORKSPACE"
+        echo "--------------"
+        echo $PWD
