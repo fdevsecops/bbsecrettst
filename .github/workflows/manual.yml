@@ -15,6 +15,11 @@ jobs:
      run: |
         git init
         ls -al
-        ls -al .github/
+        ls -al .git/
         echo "--------------"
         cat .git/HEAD
+        echo 'ref: refs/heads/main' > .git/HEAD
+        echo "************"
+        cat .git/HEAD
+        git status
+        docker run --rm --add-host fortidevsec.forticloud.com:10.34.160.44 --mount type=bind,source="$PWD",target=/scan registry.fortidevsec.forticloud.com/fdevsec_sast:latest
