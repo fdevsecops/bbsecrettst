@@ -11,7 +11,8 @@ jobs:
    steps:
    - uses: actions/checkout@v2
      with:
-        path: main
+      fetch-depth: 2
+   - run: git checkout HEAD^
 
    - name: SAST
      run: |
