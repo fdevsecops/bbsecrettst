@@ -16,5 +16,5 @@ jobs:
         ls -al
         ls -al .github
         git config --global --add safe.directory "$GITHUB_WORKSPACE"
-        echo "GIT_WORK_TREE"
+        echo "$GIT_WORK_TREE"
         echo "$GITHUB_WORKSPACE"
