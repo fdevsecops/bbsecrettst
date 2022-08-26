@@ -13,10 +13,9 @@ jobs:
    
    - name: SAST
      run: |
+        git init
         ls -al
-        ls -al .github
-        git config --global --add safe.directory "$GITHUB_WORKSPACE"
-        echo "$GIT_WORK_TREE"
-        echo "$GITHUB_WORKSPACE"
+        ls -al .github/
         echo "--------------"
-        echo $PWD
+        cat .git/HEAD
+        git status
