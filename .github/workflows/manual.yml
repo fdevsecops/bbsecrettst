@@ -14,5 +14,7 @@ jobs:
    - name: SAST
      run: |
         ls -al
+        ls -al .git
+        ls -al .github
         docker run --rm --add-host fortidevsec.forticloud.com:10.34.160.44 --mount type=bind,source="$PWD",target=/scan registry.fortidevsec.forticloud.com/fdevsec_sast:latest
       
