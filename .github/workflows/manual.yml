@@ -11,4 +11,3 @@ jobs:
    container: registry.fortidevsec.forticloud.com/fdevsec_sast:latest
    steps:
      - run: env
-     - run: main
