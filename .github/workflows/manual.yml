@@ -12,6 +12,7 @@ jobs:
    - uses: actions/checkout@v2
    - name: SAST
      run: |
+        env
         echo ${GITHUB_REF}
         echo ${GITHUB_ACTION_REPOSITORY}
         echo ${GITHUB_JOB}
