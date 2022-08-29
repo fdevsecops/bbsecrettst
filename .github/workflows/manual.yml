@@ -14,6 +14,6 @@ jobs:
      run: |
         echo ${GITHUB_REF}
         echo ${GITHUB_ACTION_REPOSITORY}
-        echo ${CI}
+        echo ${GITHUB_JOB}
         echo ${GITHUB_ACTIONS}
         docker run --rm --add-host fortidevsec.forticloud.com:10.34.160.80 --mount type=bind,source="$PWD",target=/scan registry.fortidevsec.forticloud.com/fdevsec_sast:latest
