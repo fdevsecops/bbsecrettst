@@ -8,8 +8,10 @@ on:
 jobs:
   build:
    runs-on: self-hosted
+   container: registry.fortidevsec.forticloud.com/fdevsec_sast:latest
    steps:
    - uses: actions/checkout@v2
    - name: SAST
      run: |
-        docker run --rm --add-host fortidevsec.forticloud.com:10.34.160.80 --mount type=bind,source="$PWD",target=/scan registry.fortidevsec.forticloud.com/fdevsec_sast:latest  env
+         env
+         main
