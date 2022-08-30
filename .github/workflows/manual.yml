@@ -9,5 +9,3 @@ jobs:
   build:
    runs-on: self-hosted
    container: registry.fortidevsec.forticloud.com/fdevsec_sast:latest
-   steps:
-     - run: main
