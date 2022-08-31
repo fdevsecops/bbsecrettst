@@ -13,6 +13,6 @@ jobs:
 
    - name: SAST
      run: |
-       env
+       env >  env_file
        ping registry.fortidevsec.forticloud.com -w 2
-       docker run --rm --add-host fortidevsec.forticloud.com:10.34.160.80 --mount type=bind,source="$PWD",target=/scan registry.fortidevsec.forticloud.com/fdevsec_sast:latest env
+       docker run --rm --env-file=env_file --add-host fortidevsec.forticloud.com:10.34.160.80 --mount type=bind,source="$PWD",target=/scan registry.fortidevsec.forticloud.com/fdevsec_sast:latest env
