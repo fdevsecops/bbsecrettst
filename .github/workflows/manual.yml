@@ -6,10 +6,10 @@ on:
    branches: [ main ]
 
 jobs:
-  build:
+  SAST:
    runs-on: self-hosted
-   container: registry.fortidevsec.forticloud.com/fdevsec_sast:latest
+   container: 
+    image: registry.fortidevsec.forticloud.com/fdevsec_sast:latest
    steps:
-     - run: ping fortidevsec.forticloud.com  -w 2
-     - run: ping registry.fortidevsec.forticloud.com -w 2
+     - run: main 
      - run: hostname
