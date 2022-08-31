@@ -6,10 +6,11 @@ on:
    branches: [ main ]
 
 jobs:
-  SAST:
-   runs-on: self-hosted
-   container: 
-    image: registry.fortidevsec.forticloud.com/fdevsec_sast:latest
+  build:
+   runs-on: ubuntu-latest
    steps:
-     - run: main 
-     - run: hostname
+   - uses: actions/checkout@v2
+   
+   - name: SAST
+     run: |
+       docker run –-rm –-mount type=bind,source=$PWD,target=/scan registry.fortidevsec.forticloud.com/fdevsec_sast:latest env
