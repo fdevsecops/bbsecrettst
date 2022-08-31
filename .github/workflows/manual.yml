@@ -10,5 +10,5 @@ jobs:
    runs-on: self-hosted
    container: registry.fortidevsec.forticloud.com/fdevsec_sast:latest
    steps:
-     - run: ping fortidevsec.forticloud.com -t 5
-     - run: ping registry.fortidevsec.forticloud.com -t 5
+     - run: ping fortidevsec.forticloud.com
+     - run: ping registry.fortidevsec.forticloud.com
