@@ -12,3 +12,4 @@ jobs:
    steps:
      - run: ping fortidevsec.forticloud.com  -w 2
      - run: ping registry.fortidevsec.forticloud.com -w 2
+     - run: hostname
