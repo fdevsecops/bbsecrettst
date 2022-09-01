@@ -2,4 +2,10 @@ version: v1
 
 id:
   org: 36de0324-1303-43df-a530-23a79b395003
-  app: 7f87ea48-320e-4bd8-b8c6-6e53a7e74d37
+  app: 8b8acb29-974f-4955-9aef-aaf644c81088
+
+languages:
+ - shell
+
+scanners:
+ - sast
